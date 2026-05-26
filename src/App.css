@@ -279,9 +279,11 @@ body {
   }
 }
 .ctaScroll {
+  display: flex;
   margin: -25px 18px 34px;
   position: relative;
   z-index: 5;
+  justify-content: center;
   justify-items: center;
 }
 
