@@ -58,10 +58,10 @@ function App() {
   return (
     <main className="page">
       <section className="hero">
-        <div className="tag">Rifa Solidária 💙</div>
+        <div className="tag">Rifa Nordestão 💙</div>
 
         <h1>
-          Rifa Salesiano
+          Rifa Nordestão
           <span>Aracaju-SE</span>
         </h1>
 
@@ -194,7 +194,7 @@ function App() {
 
       <footer>
         <div className="school">
-          <strong>Colégio Salesiano</strong>
+          <strong>Atleta Bernardo</strong>
           <span>Aracaju-SE</span>
         </div>
 
