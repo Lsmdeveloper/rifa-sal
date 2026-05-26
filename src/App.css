@@ -1,0 +1,514 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #001f4d;
+}
+
+.page {
+  background:
+    linear-gradient(rgba(0, 31, 77, 0.88), rgba(0, 31, 77, 0.96)),
+    url("/bg-volei.jpg");
+
+  background-size: cover;
+  background-position: center top;
+}
+
+.hero {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 20, 55, 0.95) 0%,
+      rgba(0, 40, 95, 0.78) 45%,
+      rgba(0, 20, 55, 0.6) 100%
+    ),
+    url("/bg-volei.jpg");
+
+  background-size: cover;
+  background-position: center;
+  padding: 30px 18px;
+  text-align: center;
+  position: relative;
+}
+
+
+.hero h1 {
+  margin: 0;
+  font-style: italic;
+  text-transform: uppercase;
+  font-size: 48px;
+  line-height: .88;
+  font-weight: 900;
+  letter-spacing: -2px;
+  color: white;
+
+  text-shadow:
+    0 4px 0 rgba(0,0,0,.25),
+    0 10px 25px rgba(0,0,0,.45);
+}
+
+.hero h1 span {
+  display: block;
+  color: #ffd21f;
+  font-size: 34px;
+  margin-top: 2px;
+
+  text-shadow:
+    0 4px 0 rgba(0,0,0,.25),
+    0 10px 25px rgba(0,0,0,.45);
+}
+
+.hero p {
+  max-width: 360px;
+  margin: 18px auto 26px;
+  font-size: 16px;
+  line-height: 1.35;
+  font-weight: 700;
+  color: rgba(255,255,255,.92);
+}
+
+.hero p strong {
+  color: #ffd21f;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffd21f;
+  color: #002b63;
+
+  font-weight: 900;
+  font-size: 18px;
+
+  padding: 12px 28px;
+  border-radius: 999px;
+
+  margin-bottom: 24px;
+
+  box-shadow:
+    0 8px 25px rgba(0,0,0,.28);
+}
+.ctaBox {
+  max-width: 390px;
+  margin: 0 auto;
+  border-radius: 26px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(0, 31, 77, 0.72);
+  box-shadow:
+  0 16px 35px rgba(0, 0, 0, 0.38),
+  0 0 25px rgba(255, 210, 31, 0.18),
+  inset 0 0 18px rgba(255, 210, 31, 0.12);
+  backdrop-filter: blur(8px);
+}
+.price {
+  padding: 18px 16px 8px;
+  font-size: 48px;
+  line-height: 1;
+  font-weight: 900;
+  color: white;
+  text-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+}
+.ctaBox a {
+  display: block;
+  background: #ffd21f;
+  color: #002b63;
+  text-decoration: none;
+  padding: 18px;
+  font-weight: 900;
+}
+
+.title {
+  text-align: center;
+  padding: 18px 18px 18px;
+}
+
+.title h2 {
+  margin: 0;
+  font-size: 28px;
+  text-transform: uppercase;
+}
+
+.title span {
+  color: #ffd21f;
+}
+
+.prizes {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 0 18px 28px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.prizeCard {
+  background: white;
+  border-radius: 18px;
+  padding: 16px;
+  text-align: center;
+  color: #002b63;
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.35);
+}
+
+.prizeCard img {
+  width: 100%;
+  height: 230px;
+  object-fit: contain;
+}
+
+.prizeCard h3 {
+  background: #ffd21f;
+  margin: 12px 0 0;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.buyerForm {
+  margin: 10px 18px 20px;
+  padding: 18px 16px;
+  border-radius: 24px;
+  background: linear-gradient(180deg, #002b63, #00183f);
+  color: white;
+  text-align: left;
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.45);
+  border: none;
+}
+
+.buyerForm p {
+  margin: 0 0 20px;
+  text-align: center;
+  color: #ffd21f;
+  font-size: 17px;
+  line-height: 1.35;
+  font-weight: 900;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 14px;
+  font-weight: 900;
+  color: white;
+}
+
+.formGroup input {
+  width: 100%;
+  height: 54px;
+  border-radius: 16px;
+  background: #fff;
+  padding: 0 16px;
+  color: #002b63;
+  font-size: 17px;
+  font-weight: 900;
+}
+
+.formGroup input::placeholder {
+  color: rgba(0, 43, 99, 0.55);
+}
+
+.formGroup input:focus {
+  outline: none;
+  background: white;
+  border-color: #ffd21f;
+  box-shadow:
+    0 0 0 4px rgba(255, 210, 31, 0.35),
+    inset 0 0 0 2px #ffd21f;
+}
+
+.ctaBox > a {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  background: #ffd21f;
+  color: #002b63;
+  padding: 19px 16px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 900;
+}
+.ctaBox > a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      120deg,
+      transparent 20%,
+      rgba(255,255,255,.35) 50%,
+      transparent 80%
+    );
+
+  transform: translateX(-120%);
+  animation: shine 3s infinite;
+}
+.formGrid {
+  display: flex;
+  flex-direction: column;
+}
+@keyframes shine {
+  to {
+    transform: translateX(120%);
+  }
+}
+
+@media (min-width: 768px) {
+  .ctaBox {
+    max-width: 780px;
+  }
+
+  .buyerForm {
+    margin: 14px 24px 22px;
+  }
+
+  .formGrid {
+    grid-template-columns: 0.8fr 1.2fr 1fr;
+  }
+}
+.ctaScroll {
+  margin: -25px 18px 34px;
+  position: relative;
+  z-index: 5;
+  justify-items: center;
+}
+
+.ctaScroll a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 85%;
+  padding: 20px 18px;
+
+  background: linear-gradient(180deg, #003b73, #001f4d);
+  color: #ffd21f;
+
+  border: 1px solid #ffe47a;
+  border-radius: 20px;
+
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 900;
+
+  box-shadow:
+    0 16px 35px rgba(0, 0, 0, 0.38),
+    inset 0 0 18px rgba(255, 210, 31, 0.12);
+
+  animation: pulseButton 2s infinite;
+}
+
+.ctaScroll a::before {
+  content: "🎟️";
+  margin-right: 10px;
+}
+
+@keyframes pulseButton {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.025);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+.payment {
+  margin: 0 18px;
+  padding: 24px 16px;
+  border-radius: 22px;
+  background: rgba(0, 31, 77, 0.94);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.payment h2 {
+  margin: 0;
+  font-size: 34px;
+  text-transform: uppercase;
+}
+
+.payment > p {
+  font-size: 17px;
+}
+
+.paymentGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  margin-top: 22px;
+}
+
+.pixCard,
+.creditCard {
+  background: white;
+  color: #002b63;
+  border-radius: 18px;
+  padding: 22px 16px;
+}
+
+.pixCard {
+  border: 2px dashed #0057a8;
+}
+
+.pixCard h3,
+.creditCard h3 {
+  font-size: 28px;
+  text-transform: uppercase;
+}
+
+.qrCode {
+  width: 220px;
+  max-width: 100%;
+  display: block;
+  margin: 14px auto;
+}
+
+.copyBox {
+  display: flex;
+  gap: 8px;
+  margin: 14px 0;
+}
+
+.copyBox input {
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #f3f4f6;
+  border-radius: 10px;
+  padding: 13px;
+  color: #555;
+}
+
+.copyBox button {
+  width: 48px;
+  border: none;
+  border-radius: 10px;
+  background: #f3f4f6;
+  cursor: pointer;
+}
+
+.pixButton {
+  width: 100%;
+  border: none;
+  background: #003b73;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.cardIcon {
+  font-size: 70px;
+  margin: 20px 0;
+}
+.cardFlags {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+
+.cardFlags img {
+  height: 200px;
+  object-fit: contain;
+}
+.creditCard p {
+  color: #475569;
+}
+
+.creditCard a {
+  display: block;
+  margin-top: 28px;
+  background: #186b36;
+  color: #fff;
+  text-decoration: none;
+  padding: 18px;
+  border-radius: 12px;
+  font-size: 20px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+footer {
+  padding: 30px 18px 42px;
+  text-align: center;
+  font-size: 17px;
+}
+
+.school {
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+
+.school strong,
+.school span {
+  display: block;
+}
+
+footer p {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+footer strong {
+  color: #ffd21f;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 56px 24px;
+  }
+
+  .hero h1 {
+    font-size: 64px;
+  }
+
+  .hero h1 span {
+    font-size: 82px;
+  }
+
+  .ctaBox {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .prizes {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .payment {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 32px;
+  }
+
+  .paymentGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+}
