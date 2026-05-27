@@ -3,7 +3,6 @@ import "./App.css";
 
 function App() {
   const pixCopiaCola = "00020101021126400014br.gov.bcb.pix0118lu289997@gmail.com520400005303986540510.005802BR5925LUCAS MENEZES CONSULTORIA6009SAO PAULO622905251KSJPAQS6Y1152DJ2N9G77ECG630408BB";
-  const linkCartao = "https://api-gateway.c6bank.info/v1/payment/d3da0d5a-c509-4784-b24b-55ebf5040b2b";
   const qrCodePix = "/qr_code.png";
 
   const copiarPix = async () => {
@@ -175,15 +174,37 @@ function App() {
             <p>Ambiente seguro e confiável</p>
 
             <a
-              href={linkCartao}
+              href="#"
               onClick={async (event) => {
                 event.preventDefault();
 
                 const salvou = await salvarRifa("cartao_pendente");
 
-                if (salvou) {
-                  window.location.href = linkCartao;
+                if (!salvou) return;
+
+                const response = await fetch(
+                  `${API_URL}/criar-pagamento`,
+                  {
+                    method: "POST",
+                    headers: {
+                      "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                      quantidade_cotas: Number(form.quantidade_cotas),
+                      nome: form.nome,
+                      telefone: form.whatsapp,
+                    }),
+                  }
+                );
+
+                const data = await response.json();
+
+                if (!response.ok) {
+                  alert(data.error || "Erro ao gerar pagamento");
+                  return;
                 }
+
+                window.location.href = data.url;
               }}
             >
               🔒 Pagar agora
